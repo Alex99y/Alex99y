@@ -12,11 +12,11 @@ By day I'm a backend engineer, 6+ years in, mostly working with blockchain and c
 
 **[matching-engine](https://github.com/Alex99y/matching-engine)**
 I wanted to understand how exchanges actually match orders, so I built one from scratch — no crypto stuff here, just the core matching logic. The DB is the source of truth, and it's built to survive crashes and retry properly instead of just breaking. Has its own SDK, a test web app, small bots for liquidity, a REST API, live market-data streaming, Grafana dashboards, and a load-testing suite I built to measure order ack/match/cancel latency under load — holds up well until around ~1,500-2,500 orders/sec, then the tail latency climbs fast.
-`Go` · `Fiber v3` · `TypeScript` · `NodeJS` · `RabbitMQ` · `PostgreSQL`
+`Go` · `Fiber v3` · `TypeScript` · `NodeJS` · `RabbitMQ` · `PostgreSQL` · `Docker`
 
 **[deposit-collector](https://github.com/Alex99y/deposit-collector)**
 Basically a deposit/withdrawal module you can plug into an existing system. Each user gets their own address, deposits get tracked, and balances are kept in a DB until they want to withdraw. Works with Bitcoin and EVM chains right now, Solana and ERC-20 withdrawals are still in the works.
-`Go` · `PostgreSQL` · `RabbitMQ`
+`Go` · `PostgreSQL` · `RabbitMQ` · `Docker`
 
 **Smaller stuff**
 - [ledger-p2wpkh](https://github.com/Alex99y/ledger-p2wpkh) — signs P2WPKH (bech32) Bitcoin transactions using a Ledger wallet
