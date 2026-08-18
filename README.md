@@ -11,7 +11,7 @@ By day I'm a backend engineer, 6+ years in, mostly working with blockchain and c
 ### Stuff I'm building
 
 **[matching-engine](https://github.com/Alex99y/matching-engine)**
-I wanted to understand how exchanges actually match orders, so I built one from scratch — no crypto stuff here, just the core matching logic. The DB is the source of truth, it handles about ~2000 ops per market, and it's built to survive crashes and retry properly instead of just breaking. Still a work in progress (tests and Grafana are next), but the core already works well: has its own SDK, a test web app, small bots for liquidity, and a REST API.
+I wanted to understand how exchanges actually match orders, so I built one from scratch — no crypto stuff here, just the core matching logic. The DB is the source of truth, and it's built to survive crashes and retry properly instead of just breaking. Has its own SDK, a test web app, small bots for liquidity, a REST API, live market-data streaming, Grafana dashboards, and a load-testing suite I built to measure order ack/match/cancel latency under load — holds up well until around ~1,500-2,500 orders/sec, then the tail latency climbs fast.
 `Go` · `Fiber v3` · `TypeScript` · `NodeJS` · `RabbitMQ` · `PostgreSQL`
 
 **[deposit-collector](https://github.com/Alex99y/deposit-collector)**
