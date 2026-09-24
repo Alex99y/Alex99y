@@ -12,6 +12,10 @@ By day I'm a backend engineer, 6+ years in, mostly working with blockchain and c
 I wanted to understand how exchanges actually match orders, so I built one from scratch — no crypto stuff here, just the core matching logic. The DB is the source of truth, and it's built to survive crashes and retry properly instead of just breaking. Has its own SDK, a test web app, small bots for liquidity, a REST API, live market-data streaming, Grafana dashboards, and a load-testing suite I built to measure order ack/match/cancel latency under load — holds up well until around ~1,500-2,500 orders/sec, then the tail latency climbs fast.
 `Go` · `Fiber v3` · `TypeScript` · `NodeJS` · `RabbitMQ` · `PostgreSQL` · `Docker` · `gRPC` · `GCP`
 
+**[agentic-toolkit](https://github.com/Alex99y/agentic-toolkit)**
+A personal collection of Claude Code plugins, skills, and rules for generic AI agent workflows. Right now it's got a `resolve-github-issue` plugin that takes a GitHub issue, plans the fix, implements it in an isolated git worktree, verifies it, and opens the PR.
+`Claude Code` · `GitHub CLI`
+
 **[deposit-collector](https://github.com/Alex99y/deposit-collector)**
 Basically a deposit/withdrawal module you can plug into an existing system. Each user gets their own address, deposits get tracked, and balances are kept in a DB until they want to withdraw. Works with Bitcoin and EVM chains right now, Solana and ERC-20 withdrawals are still in the works.
 `Go` · `PostgreSQL` · `RabbitMQ` · `Docker`
